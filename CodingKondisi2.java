@@ -16,7 +16,7 @@ public class CodingKondisi2 {
 
         System.out.println("Masukkan jumlah mnmKaleng yang kadaluarsa");
         jmlMnmKaleng = input.nextInt();
-        System.out.println("Masukkan harga snack");
+        System.out.println("Masukkan harga mnmKaleng");
         harga = input.nextDouble();
         totalMnmKaleng = (double) (jmlSnack * harga);
         System.out.println("Total kerugian minuman kaleng kadaluarsa adalah " + totalMnmKaleng);
