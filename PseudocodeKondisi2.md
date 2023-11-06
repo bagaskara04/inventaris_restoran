@@ -1,26 +1,21 @@
-Algoritma: Penyortiran_Makanan_Ringan_dan_Minuman_Kaleng_berdasarkan_Kondisi_Makanan
+Algoritma: Total_Kerugian_Produk_Kadaluarsa
 
 Deklarasi:
-susu, soda, snack: string
+jmlSnack, jmlMnmKaleng : int
+totalSnack, totalMnmKaleng, harga, kerugian : double
 
 Deskripsi:
-1. print "Penyortiran Makanan Ringan dan Minuman Kaleng berdasarkan Kondisi Makanan"
-2. print "Masukkan kondisi makanan dan minuman :"
-3. print "susu= "
-4. read susu
-5. if (susu: tidakBerubahWarna)
-6. print "Kasihkan pemeliharaan"
-7. if (susu: berubahWarna)
-8. print "Buang"
-9. print "soda= "
-10. read soda
-11. if (soda: sparkling)
-12. print "untuk Membersihkan panggangan"
-13. if (soda: noSparkling)
-14. print "untuk Membersihkan Toilet"
-15. print "snack= "
-16. read snack
-17. if (snack: noKrispi)
-18. print "Oven"
-19. if (snack: noKrispiBedaRasa)
-20. print "Untuk pakan ternak"
+1. print "Masukkan jumlah snack yang kadaluarsa"
+2. read jmlSnack
+3. print "Masukkan harga snack"
+4. read harga
+5. totalSnack = jmlSnack * harga
+6. print "Total kerugian snack kadaluarsa adalah " + totalSnack
+7. print "Masukkan jumlah mnmKaleng yang kadaluarsa"
+8. read jmlMnmKaleng
+9. print "Masukkan harga mnmKaleng"
+10. read harga
+11. totalMnmKaleng = jmlSnack * harga
+12. print "Total kerugian minuman kaleng kadaluarsa adalah " + totalMnmKaleng
+13. kerugian = totalSnack + totalMnmKaleng
+14. print "Kerugian Bulan Oktober sebesar Rp. " + kerugian

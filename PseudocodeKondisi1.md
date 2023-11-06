@@ -8,14 +8,14 @@ Deskripsi:
 2. print "Masukkan masa kadaluarsa snack :"
 3. print "snack= "
 4. read snack
-5. if (snack: lebihTigaBulan)
+5. if (snack: lebihTigaBln)
 6. print "Tdk layak konsumsi"
-7. if (snack: kurangTigaBln)
+7. else
 8. print "Layak konsumsi"
 9. print "Masukkan masa kadaluarsa minuman kaleng :"
 10. print "mnmKaleng= "
 11. read mnmKaleng
-12. if (mnmKaleng: lebihTigaBulan)
+12. if (mnmKaleng: lebihTigaBln)
 13. print "Tdk layak konsumsi"
-14. if (mnmKaleng: kurangTigaBulan)
+14. else
 15. print "Layak konsumsi"
