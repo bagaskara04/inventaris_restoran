@@ -11,8 +11,8 @@ public class CodingKondisi1 {
         if (snack.equals("lebihTigaBln")) {
             System.out.println("Tdk layak konsumsi");
         }
-        if (snack.equals("kurangTigaBln")) {
-            System.out.println("Tdk layak konsumsi");
+        else {
+            System.out.println("Layak konsumsi");
         }
 
         System.out.println("Masukkan masa kadaluarsa minuman kaleng :");
@@ -21,8 +21,8 @@ public class CodingKondisi1 {
         if (mnmKaleng.equals("lebihTigaBln")) {
             System.out.println("Tdk layak konsumsi");
         }
-        if (mnmKaleng.equals("kurangTigaBln")) {
-            System.out.println("Tdk layak konsumsi");
+        else {
+            System.out.println("Layak konsumsi");
         }
             
     }
