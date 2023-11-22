@@ -20,11 +20,12 @@ public class RestokBarang {
         do {
             if((beli > 0)) {
                 if (beli >= 30) {
-                modal = (double) beli * (harga - harga * disc); 
+                modal = (double) beli * harga - harga * disc; 
                 System.out.println("Modal yang diperlukan : " + modal);
-                 } else if (beli < 30)
+                 } else{
                 modal = (double) beli * harga;
                 System.out.println("Modal yang diperlukan : " + modal);
+                 }
             } else
             System.out.println("Masukkan salah");
         } while (beli == 0);
