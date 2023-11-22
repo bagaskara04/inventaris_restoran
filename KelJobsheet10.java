@@ -126,6 +126,7 @@ public class KelJobsheet10 {
                 default:
                     System.out.println("Pilihan tidak valid. Silakan pilih menu 1/2/3/4.");
             }
+            System.out.println("Maharani");
         }
     }
 }
