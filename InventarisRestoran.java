@@ -176,7 +176,7 @@ public class InventarisRestoran {
         String jns = input.nextLine();
         input.nextLine();
         System.out.print("Masukkan jumlah barang : ");
-        int barang = input.nextInt();git
+        int barang = input.nextInt();
 
         int[] sisaBarang = new int[barang];
         for (int i = 0; i < sisaBarang.length; i++) {
