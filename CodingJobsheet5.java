@@ -1,38 +1,48 @@
 import java.util.Scanner;
-
 public class CodingJobsheet5 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        System.out.println("Penyortiran Makanan Ringan & Minuman Kaleng Berdasarkan Masa Kadaluarsa");
-        System.out.println("Masukkan kondisi makanan dan minuman:");
-        System.out.print("susu = ");
-        String susu = scanner.nextLine();
-        if (susu.equals("tidakBerubahWarna")) {
-            System.out.println("Kasihkan peliharaan");
-        }
-        else {
-            System.out.println("Buang");
-        }
-
-        System.out.print("soda = ");
-        String soda = scanner.nextLine();
-        if (soda.equals("tidakSparkling")) {
-            System.out.println("Membersihkan toilet");
-        }
-        else {
-            System.out.println("Membersihkan panggangan");
+        System.out.println("Kondisi Minuman Kaleng");
+        
+        System.out.print("susu (tidakBerubahWarna/berubahWarna): ");
+        String susu = input.nextLine();
+        switch (susu) {
+            case "tidakBerubahWarna":
+                System.out.println("Kasihkan peliharaan");
+                break;
+            case "berubahWarna":
+                System.out.println("Buang");
+                break;
+            default:
+                System.out.println("Inputan salah");
         }
 
-        System.out.print("snack= ");
-        String snack = scanner.nextLine();
-        if (snack.equals("tidaKrispi")) {
-            System.out.println("Untuk pupuk");
-        }
-        else {
-            System.out.println("Untuk pakan ternak");
+        System.out.print("soda (tidakSparkling/sparkling) = ");
+        String soda = input.nextLine();
+        switch (soda) {
+            case "tidakSparkling":
+                System.out.println("Membersihkan toilet");
+                break;
+            case "sparkling":
+                System.out.println("Membersihkan panggangan");
+                break;
+            default:
+                System.out.println("Inputan salah");
         }
 
-        scanner.close();
+        System.out.println("Kondisi Makanan Ringan");
+        System.out.print("snack (tidakKrispi/krispi) = ");
+        String ciki = input.nextLine();
+        switch (ciki) {
+            case "tidakKrispi":
+                System.out.println("Untuk pupuk");
+                break;
+            case "krispi":
+                System.out.println("Untuk pakan ternak");
+                break;
+            default:
+                System.out.println("Inputan salah");
+        }
     }
 }
