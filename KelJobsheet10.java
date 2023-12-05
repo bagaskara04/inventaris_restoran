@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class KelJobsheet10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -89,7 +88,6 @@ public class KelJobsheet10 {
                     System.out.println();
                     break;
                 
-
                 case 4:
                 while (true) {
                     System.out.println("Tampilkan jumlah barang yang direstok");
