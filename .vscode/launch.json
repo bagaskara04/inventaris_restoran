@@ -1,0 +1,77 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "CodingJobsheet5",
+            "request": "launch",
+            "mainClass": "CodingJobsheet5",
+            "projectName": "inventaris_restoran_9cf59d95"
+        },
+        {
+            "type": "java",
+            "name": "CodingJobsheet6",
+            "request": "launch",
+            "mainClass": "CodingJobsheet6",
+            "projectName": "inventaris_restoran_9cf59d95"
+        },
+        {
+            "type": "java",
+            "name": "CodingKondisi1",
+            "request": "launch",
+            "mainClass": "CodingKondisi1",
+            "projectName": "inventaris_restoran_9cf59d95"
+        },
+        {
+            "type": "java",
+            "name": "CodingKondisi2",
+            "request": "launch",
+            "mainClass": "CodingKondisi2",
+            "projectName": "inventaris_restoran_9cf59d95"
+        },
+        {
+            "type": "java",
+            "name": "InventarisRestoran",
+            "request": "launch",
+            "mainClass": "InventarisRestoran",
+            "projectName": "inventaris_restoran_9cf59d95"
+        },
+        {
+            "type": "java",
+            "name": "KelJobsheet10",
+            "request": "launch",
+            "mainClass": "KelJobsheet10",
+            "projectName": "inventaris_restoran_9cf59d95"
+        },
+        {
+            "type": "java",
+            "name": "KelJobsheet9",
+            "request": "launch",
+            "mainClass": "KelJobsheet9",
+            "projectName": "inventaris_restoran_9cf59d95"
+        },
+        {
+            "type": "java",
+            "name": "RestokBarang",
+            "request": "launch",
+            "mainClass": "RestokBarang",
+            "projectName": "inventaris_restoran_9cf59d95"
+        },
+        {
+            "type": "java",
+            "name": "inventaris_restoran",
+            "request": "launch",
+            "mainClass": "inventaris_restoran",
+            "projectName": "inventaris_restoran_9cf59d95"
+        }
+    ]
+}

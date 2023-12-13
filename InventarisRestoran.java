@@ -137,13 +137,13 @@ public class InventarisRestoran {
 
         //JOBSHEET 7 Perulangan 1
         //Fitur Restok Barang
-        String jenis;
+        String jenis, kategori1;
         int restok = 60, sisa, beli, price = 5000;
         double disc = 0.05, modal = 0.0;
 
         System.out.println("*****RESTOK BARANG*****");
         System.out.print("Masukkan jenis barang (Makanan Ringan/Minuman Kaleng) : ");
-        kategori = input.nextLine();
+        kategori1 = input.nextLine();
         input.nextLine();
         System.out.print("Masukkan sisa barang : ");
         sisa = input.nextInt();
@@ -184,13 +184,13 @@ public class InventarisRestoran {
             sisaBarang[i] = input.nextInt();
             int belii = (int) restook - sisaBarang[i];
             System.out.println("Jumlah barang yang dibeli : " + belii);
-            if((belii > 0)) { //Perhitungan Modal
+            if((belii != 0)) { //Perhitungan Modal
                 if (belii >= 30) {
                 modaal = (double) belii * (hargaa - hargaa * diskon); 
-                System.out.println("Modal yang diperlukan : Rp." + modaal);
-                } else if (belii < 30)
+                System.out.println("Modal yang diperlukan Rp." + modaal);
+                } else
                 modaal = (double) belii * hargaa;
-                System.out.println("Modal yang diperlukan : Rp." + modaal);
+                System.out.println("Modal yang diperlukan Rp." + modaal);
             } else
             System.out.println("Modal yang diperlukan Rp.0");
         }
