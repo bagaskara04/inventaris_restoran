@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Uji",
+            "request": "launch",
+            "mainClass": "Uji",
+            "projectName": "inventaris_restoran_9cf59d95"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

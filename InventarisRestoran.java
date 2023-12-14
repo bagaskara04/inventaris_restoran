@@ -68,14 +68,13 @@ public class InventarisRestoran {
         
         //Fitur Pengolahan Makanan Ringan & Minuman Kaleng Kadaluarsa Berdasarkan Ciri Fisik
         System.out.println("Kondisi Minuman Kaleng");
-        
         System.out.print("susu (tidakBerubahWarna/berubahWarna): ");
         String susu = input.nextLine();
         switch (susu) {
-            case "tidakBerubahWarna":
+            case "tberubah":
                 System.out.println("Kasihkan peliharaan");
                 break;
-            case "berubahWarna":
+            case "berubah":
                 System.out.println("Buang");
                 break;
             default:
@@ -195,7 +194,7 @@ public class InventarisRestoran {
             System.out.println("Modal yang diperlukan Rp.0");
         }
 
-        //JOBSHEET 10 Array 2
+        //JOBSHEET 10 Array 2 & JOBSHEET 11 Perulangan 2
         //Fitur Restok Barang
 
         int jml = 60;
@@ -301,7 +300,7 @@ public class InventarisRestoran {
                     System.out.print("Minuman Kaleng: ");
                     for (int b = 0; b < minumanKaleng.length; b++) {
                         for (int k = 0; k < minumanKaleng[b].length; k++) {
-                            int beeli = total - minumanKaleng[b][k];
+                            int beeli = jml - minumanKaleng[b][k];
                             if (beeli > 0) {
                             System.out.print(" " + beeli + " ");
                             }
