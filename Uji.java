@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class CodingJobsheet5 {
+
+public class Uji {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -8,7 +9,7 @@ public class CodingJobsheet5 {
         System.out.print("susu (tidakBerubahWarna/berubahWarna): ");
         String susu = input.nextLine();
         switch (susu) {
-            case "tidakBerubahWarna":
+            case "tidak":
                 System.out.println("Kasihkan peliharaan");
                 break;
             case "berubahWarna":
