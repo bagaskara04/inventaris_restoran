@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PelaporanBarang",
+            "request": "launch",
+            "mainClass": "PelaporanBarang",
+            "projectName": "inventaris_restoran_42106f69"
+        },
+        {
+            "type": "java",
             "name": "Uji",
             "request": "launch",
             "mainClass": "Uji",
