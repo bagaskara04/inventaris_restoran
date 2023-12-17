@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 public class inven2 {
+    static Scanner input = new Scanner(System.in);
+    static int menu, stok_makanan_ringan_awal, stok_minuman_kaleng_awal, stok_makanan_ringan_yang_kadaluarsa = 0,
+            stok_minuman_kaleng_yang_kadaluarsa = 0, stok_makanan_ringan_layak_konsumsi,
+            stok_minuman_kaleng_layak_konsumsi;
+    static double totalSnack, totalMnmKaleng, harga, kerugian;
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int menu;
-        int stok_makanan_ringan_awal, stok_minuman_kaleng_awal, stok_makanan_ringan_yang_kadaluarsa = 0,
-                stok_minuman_kaleng_yang_kadaluarsa = 0, stok_makanan_ringan_layak_konsumsi,
-                stok_minuman_kaleng_layak_konsumsi;
-        double totalSnack, totalMnmKaleng, harga, kerugian;
+        
 
         while (true) {
             System.out.println("============== Inventaris Restoran ==============");
