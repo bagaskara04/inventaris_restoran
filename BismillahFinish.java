@@ -5,7 +5,7 @@ public class BismillahFinish {
 
         int rusak1 = 0, rusak2 = 0, rusak3 = 0, snackNo = 0, susuNo = 0, sodaNo = 0, restok1 = 0, restok2 = 0, restok3 = 0, harga1 = 0, harga2 = 0, harga3 = 0;
         int snack = 0, susu = 0, soda = 0, menu, jual1 = 0, jual2 = 0, jual3 = 0, exp1 = 0, exp2 = 0, exp3 = 0, now, cek1 = 0, cek2 = 0, cek3 = 0, snackExp = 0, susuExp = 0, sodaExp = 0;
-        int rugi1, rugi2, rugi3, sisa1 = 0, sisa2 = 0, sisa3 = 0, gudang = 0;
+        int rugi1 = 0, rugi2 = 0, rugi3 = 0, sisa1 = 0, sisa2 = 0, sisa3 = 0, gudang = 0;
 
         while (true) {
             System.out.println("Menu 1: Input Data Barang Masuk & Keluar");
@@ -100,27 +100,30 @@ public class BismillahFinish {
                     System.out.println("Kerugian snack sebesar Rp. " + rugi1);
                 }
                 
-                
                 System.out.print("Masukkan harga susu: ");
                 harga2 = sc.nextInt();
-                if (susuExp != cek2) {
+                int banding2 = Math.max(susuExp, susuNo);
+                if (banding2 == susuNo) {
                     rugi2 = rusak2 * harga2;
                     System.out.println("Kerugian susu sebesar Rp. " + rugi2);
-                } else
-                rugi2 = (susuExp + rusak2) * harga2;
-                System.out.println("Kerugian susu sebesar Rp. " + rugi2);
+                } else if (banding2 == susuExp) {
+                    rugi2 = (susuExp + rusak2) * harga2;
+                    System.out.println("Kerugian susu sebesar Rp. " + rugi2);
+                }
                 
                 System.out.print("Masukkan harga soda: ");
                 harga3 = sc.nextInt();
-                if (sodaExp != cek3) {
+                int banding3 = Math.max(sodaExp, sodaNo);
+                if (banding3 == sodaNo) {
                     rugi3 = rusak3 * harga3;
                     System.out.println("Kerugian soda sebesar Rp. " + rugi3);
                     break;
-                } else
-                rugi3 = (sodaExp + rusak3) * harga3;
-                System.out.println("Kerugian soda sebesar Rp. " + rugi3);
-
-                int kerugian =  + rugi2 + rugi3;
+                } else if (banding3 == sodaExp) {
+                    rugi3 = (sodaExp + rusak3) * harga3;
+                    System.out.println("Kerugian soda sebesar Rp. " + rugi3);
+                }
+            
+                int kerugian = rugi1 + rugi2 + rugi3;
                 System.out.println("TOTAL KERUGIAN = Rp. " + kerugian);
 
                 System.out.println();
@@ -175,17 +178,17 @@ public class BismillahFinish {
                 case 4:
                 System.out.println("TAMPILAN DATA SNACK");
                 
-                String[] jenis = {"Stok Awal", "Terjual", "Kadaluarsa"};
-                System.out.printf("%s \t %s \t %s \n", jenis[0], jenis[1], jenis[2]);
+                String[] jenis = {"Stok Awal", "Terjual", "Kadaluarsa", "Rusak"};
+                System.out.printf("\t %s\t %s \t %s \t %s\n", jenis[0], jenis[1], jenis[2], jenis[3]);
 
                 int[][] input = new int[][] {
-                    {snack, jual1, cek1},
-                    {susu, jual2, cek2},
-                    {soda, jual3, cek3}
+                    {snack, jual1, cek1, rusak1},
+                    {susu, jual2, cek2, rusak2},
+                    {soda, jual3, cek3, rusak3}
                 };
-                System.out.printf("SNACK: " + "%s \t %s \t %s \n", input[0][0], input[0][1], input[0][2]);
-                System.out.printf("SUSU : " + "%s \t %s \t %s \n", input[1][0], input[1][1], input[1][2]);
-                System.out.printf("SODA : " + "%s \t %s \t %s \n", input[2][0], input[2][1], input[2][2]);
+                System.out.printf("SNACK: " + "\t %s \t\t %s \t\t %s \t\t %s \n", input[0][0], input[0][1], input[0][2], input[0][3]);
+                System.out.printf("SUSU : " + "\t %s \t\t %s \t\t %s \t\t %s \n", input[1][0], input[1][1], input[1][2], input[1][3]);
+                System.out.printf("SODA : " + "\t %s \t\t %s \t\t %s \t\t %s \n", input[2][0], input[2][1], input[2][2], input[2][3]);
                 break;
 
                 case 5:
@@ -213,6 +216,7 @@ public class BismillahFinish {
 
                 case 6:
                 System.out.println("UPDATE STOK BARANG");
+                System.out.print("Jenis Barang   : ");
                 String[] barang = {"Snack", "Susu", "Soda"};
                 System.out.printf("%s \t %s \t %s \n", barang[0], barang[1], barang[2]);
 
@@ -220,8 +224,10 @@ public class BismillahFinish {
                     {sisa1, sisa2, sisa3},
                     {gudang, gudang, gudang}
                 };
-                System.out.printf("Sebelum: " + "%s \t %s \t %s \n", input2[0][0], input2[0][1], input2[0][2]);
-                System.out.printf("Sesudah: " + "%s \t %s \t %s \n", input2[1][0], input2[1][1], input2[1][2]);
+                System.out.print("Sebelum        : ");
+                System.out.printf("%s \t %s \t %s \n", input2[0][0], input2[0][1], input2[0][2]);
+                System.out.print("Sesudah        : ");
+                System.out.printf("%s \t %s \t %s \n", input2[1][0], input2[1][1], input2[1][2]);
                 break;
 
                 case 7:
