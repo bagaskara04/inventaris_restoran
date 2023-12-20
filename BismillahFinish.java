@@ -156,6 +156,7 @@ public class BismillahFinish {
     /////////////////////////////////////////// //////////////////////////////////////////////////////////
     static void databarangMasukKeluar() {
         System.out.println("INPUT DATA MAKANAN RINGAN");
+        System.out.println("=========================");
         System.out.print("Masukkan stok awal snack: ");
         snack = sc.nextInt();
         System.out.print("Masukkan bulan kadaluarsa (1-12): ");
@@ -166,6 +167,7 @@ public class BismillahFinish {
         System.out.println();
 
         System.out.println("INPUT DATA MINUMAN KALENG");
+        System.out.println("=========================");
         System.out.print("Masukkan stok awal susu: ");
         susu = sc.nextInt();
         System.out.print("Masukkan bulan kadaluarsa (1-12): ");
@@ -187,6 +189,7 @@ public class BismillahFinish {
         System.out.println();
 
         System.out.println("MAKANAN RINGAN");
+        System.out.println("==============");
         System.out.print("Masukkan jumlah snack yang rusak: ");
         rusak1 = sc.nextInt();
         cek1 = snack - jual1 - rusak1;
@@ -200,6 +203,7 @@ public class BismillahFinish {
         System.out.println();
 
         System.out.println("MINUMAN KALENG");
+        System.out.println("==============");
         System.out.print("Masukkan jumlah susu yang rusak: ");
         rusak2 = sc.nextInt();
         cek2 = susu - jual2 - rusak2;
@@ -224,6 +228,7 @@ public class BismillahFinish {
 
         // Perhitungan Total Kerugian
         System.out.println("PERHITUNGAN TOTAL KERUGIAN");
+        System.out.println("==========================");
         System.out.print("Masukkan harga snack: ");
         harga1 = sc.nextInt();
         banding1 = Math.max(snackExp, snackNo);
@@ -265,6 +270,7 @@ public class BismillahFinish {
 
     static void RestokBarang() {
         System.out.println("RESTOK BARANG");
+        System.out.println("=============");
         System.out.print("Masukkan jumlah barang yang harus tersedia digudang: ");
         gudang = sc.nextInt();
 
@@ -277,6 +283,7 @@ public class BismillahFinish {
         System.out.println();
 
         System.out.println("CEK STATUS BARANG");
+        System.out.println("=================");
         if (sisa1 >= gudang) {
             System.out.println("Status Makanan Ringan: tidak perlu restok");
         } else
@@ -304,6 +311,7 @@ public class BismillahFinish {
         beli3 = restok3 * harga3;
         modal = beli1 + beli2 + beli3;
         System.out.println("PERHITUNGAN MODAL");
+        System.out.println("=================");
         System.out.println("Modal beli snack: Rp. " + beli1);
         System.out.println("Modal beli susu: Rp. " + beli2);
         System.out.println("Modal beli soda: Rp. " + beli3);
@@ -312,7 +320,7 @@ public class BismillahFinish {
 
     static void LaporanBarangMKR() {
         System.out.println("TAMPILAN DATA SNACK");
-
+        System.out.println("===================");
         String[] jenis = { "Stok Awal", "Terjual", "Kadaluarsa", "Rusak" };
         System.out.printf("\t %s\t %s \t %s \t %s\n", jenis[0], jenis[1], jenis[2], jenis[3]);
 
@@ -354,6 +362,7 @@ public class BismillahFinish {
 
     static void UpdateStok() {
         System.out.println("UPDATE STOK BARANG");
+        System.out.println("==================");
         System.out.print("Jenis Barang   : ");
         System.out.printf("%s \t %s \t %s \n", barang[0], barang[1], barang[2]);
 
@@ -387,6 +396,7 @@ public class BismillahFinish {
         System.out.println();
 
         System.out.println("CANNED BEVERAGE DATA INPUT");
+        System.out.println("==========================");
         System.out.print("Input the starting stock of milks: ");
         susu = sc.nextInt();
         System.out.print("Enter expiration month (1-12): ");
