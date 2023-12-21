@@ -20,10 +20,10 @@ public class BismillahFinish {
             System.out.println("===== INVENTARIS RESTORAN =====");
             System.out.println("===============================");
             System.out.println("== Menu 1 : Bahasa Indonesia ==");
-            System.out.println("== Menu 2 : England          ==");
+            System.out.println("== Menu 2 : English          ==");
             System.out.println("== Menu 3 : Keluar           ==");
             System.out.println("===============================");
-            System.out.print("Pilih Bahasa : ");
+            System.out.print("Pilih Bahasa (1/2/3): ");
             int bahasa = sc.nextInt();
             switch (bahasa) {
                 case 1:
@@ -50,7 +50,7 @@ public class BismillahFinish {
         System.out.println("== Menu 2 : Karyawan         ==");
         System.out.println("== Menu 3 : Keluar           ==");
         System.out.println("===============================");
-        System.out.print("Pilih Role : ");
+        System.out.print("Pilih Role (1/2/3): ");
         int role = sc.nextInt();
         switch (role) {
             case 1:
@@ -59,7 +59,11 @@ public class BismillahFinish {
             case 2:
                 KaryawanIndo();
                 break;
+            case 3:
+                Keluar();
+                break;
             default:
+            System.out.println("Pilihan Anda Salah");
                 break;
         }
     }
@@ -72,7 +76,7 @@ public class BismillahFinish {
         System.out.println("== Menu 2 : Staff            ==");
         System.out.println("== Menu 3 : Exit             ==");
         System.out.println("===============================");
-        System.out.print("Pilih Role : ");
+        System.out.print("Select Role (1/2/3): ");
         int role = sc.nextInt();
         switch (role) {
             case 1:
@@ -81,21 +85,31 @@ public class BismillahFinish {
             case 2:
                 StaffEnglish();
                 break;
+            case 3:
+                Exit();
+                break;
             default:
+            System.out.println("Wrong choice");
                 break;
         }
     }
 
-    static void ManajerIndo() {
+    static void KeluarProgram() {
+        // Keluar Program Pilih Bahasa
+        System.out.println("Terima kasih");
+        System.exit(0);
+    }
 
+    static void ManajerIndo() {
+        // Manajer Bahasa Indonesia
         while (true) {
             System.out.println("===================== INVENTARIS RESTORAN ======================");
             System.out.println("============================ Manajer ===========================");
-            System.out.println("== Menu 1: Restok Barang                                      =="); // manajer
-            System.out.println("== Menu 2: Pelaporan Barang Masuk, Keluar, Rusak              =="); // manajer/staff
-            System.out.println("== Menu 3: Pelaporan Barang Yang Paling Banyak Keluar & Habis =="); // manajer
-            System.out.println("== Menu 4: Update Stok Barang                                 =="); // staff/manajer
-            System.out.println("== Menu 5: Keluar                                             =="); // staff/manajer
+            System.out.println("== Menu 1: Restok Barang                                      ==");
+            System.out.println("== Menu 2: Pelaporan Barang Masuk, Keluar, Rusak              ==");
+            System.out.println("== Menu 3: Pelaporan Barang Yang Paling Banyak Keluar & Habis ==");
+            System.out.println("== Menu 4: Update Stok Barang                                 ==");
+            System.out.println("== Menu 5: Keluar                                             ==");
             System.out.println("================================================================");
             System.out.print("Pilih Menu (1/2/3/4/5): ");
             menu = sc.nextInt();
@@ -129,6 +143,7 @@ public class BismillahFinish {
     }
 
     static void KaryawanIndo() {
+        // Karyawan Bahasa Indonesia
         while (true) {
             System.out.println("===================== INVENTARIS RESTORAN ======================");
             System.out.println("========================== Karyawan ============================");
@@ -169,8 +184,8 @@ public class BismillahFinish {
         }
     }
 
-   static void ManagerEnglish() {
-
+    static void ManagerEnglish() {
+        // Manajer Bahasa Inggris
         while (true) {
             System.out.println("===================== INVENTARIS RESTORAN ======================");
             System.out.println("=========================== Manager ============================");
@@ -180,7 +195,7 @@ public class BismillahFinish {
             System.out.println("== Menu 4: Stock Goods Update                                 =="); // staff/manajer
             System.out.println("== Menu 5: Exit                                               =="); // staff/manajer
             System.out.println("================================================================");
-            System.out.print("Choose Menu (1/2/3/4/5): ");
+            System.out.print("Select Menu (1/2/3/4/5): ");
             menu = sc.nextInt();
 
             switch (menu) {
@@ -212,6 +227,7 @@ public class BismillahFinish {
     }
 
     static void StaffEnglish() {
+        // Karyawan Bahasa Inggris
         while (true) {
             System.out.println("===================== INVENTARIS RESTORAN ======================");
             System.out.println("============================ Staff =============================");
@@ -219,9 +235,9 @@ public class BismillahFinish {
             System.out.println("== Menu 2: Damaged Goods Data Input                           ==");
             System.out.println("== Menu 3: Reporting of Goods In, Out, Damaged                ==");
             System.out.println("== Menu 4: Stock Goods Update                                 ==");
-            System.out.println("== Menu 5: Exit                                             ==");
+            System.out.println("== Menu 5: Exit                                               ==");
             System.out.println("================================================================");
-            System.out.print("Choose Menu (1/2/3/4/5): ");
+            System.out.print("Select Menu (1/2/3/4/5): ");
             menu = sc.nextInt();
 
             switch (menu) {
@@ -250,11 +266,6 @@ public class BismillahFinish {
             }
 
         }
-    }
-
-    static void KeluarProgram() {
-        System.out.println("Terima kasih");
-        System.exit(0);
     }
 
     /////////////////////////////////////////// Bahasa Indonesia
@@ -523,78 +534,78 @@ public class BismillahFinish {
         System.out.println();
 
         System.out.println("SNACK");
-        System.out.print("Masukkan jumlah snack yang rusak: ");
+        System.out.print("Input the number of broken snacks:");
         rusak1 = sc.nextInt();
         cek1 = snack - jual1 - rusak1;
         if (now < exp1) {
-            System.out.println("Total snack tidak kadaluarsa: " + cek1 + " buah");
+            System.out.println("Total unexpired snacks are " + cek1 + " pieces");
             snackNo = cek1;
         } else
-            System.out.println("Total snack kadaluarsa: " + cek1 + " buah");
+            System.out.println("Total expired snacks are " + cek1 + " pieces");
         snackExp = cek1;
 
         System.out.println();
 
-        System.out.println("MINUMAN KALENG");
-        System.out.print("Masukkan jumlah susu yang rusak: ");
+        System.out.println("CANNED BEVERAGES");
+        System.out.print("Input the number of broken milks: ");
         rusak2 = sc.nextInt();
         cek2 = susu - jual2 - rusak2;
         if (now < exp2) {
-            System.out.println("Total susu tidak kadaluarsa: " + cek2 + " buah");
+            System.out.println("Total unexpired milks are " + cek2 + " bottle");
             susuNo = cek2;
         } else
-            System.out.println("Total susu kadaluarsa: " + cek2 + " buah");
+            System.out.println("Total expired milks are " + cek2 + " bottle");
         susuExp = cek2;
 
-        System.out.print("Masukkan jumlah soda yang rusak: ");
+        System.out.print("Input the number of broken sodas: ");
         rusak3 = sc.nextInt();
         cek3 = soda - jual3 - rusak3;
         if (now < exp3) {
-            System.out.println("Total soda tidak kadaluarsa: " + cek3 + " buah");
+            System.out.println("Total unexpired sodas are " + cek3 + " bottle");
             sodaNo = cek3;
         } else
-            System.out.println("Total soda kadaluarsa: " + cek3 + " buah");
+            System.out.println("Total expired milks are " + cek3 + " bottle");
         sodaExp = cek3;
 
         System.out.println();
 
         // Perhitungan Total Kerugian
-        System.out.println("PERHITUNGAN TOTAL KERUGIAN");
-        System.out.print("Masukkan harga snack: ");
+        System.out.println("CALCULATION OF TOTAL LOSS");
+        System.out.print("Input the price of the snack: ");
         harga1 = sc.nextInt();
         banding1 = Math.max(snackExp, snackNo);
         if (banding1 == snackNo) {
             rugi1 = rusak1 * harga1;
-            System.out.println("Kerugian snack sebesar Rp. " + rugi1);
+            System.out.println("Snack losses amounted to Rp. " + rugi1);
         } else if (banding1 == snackExp) {
             rugi1 = (snackExp + rusak1) * harga1;
-            System.out.println("Kerugian snack sebesar Rp. " + rugi1);
+            System.out.println("Snack losses amounted to Rp. " + rugi1);
         }
 
-        System.out.print("Masukkan harga susu: ");
+        System.out.print("Input the price of the milk: ");
         harga2 = sc.nextInt();
         banding2 = Math.max(susuExp, susuNo);
         if (banding2 == susuNo) {
             rugi2 = rusak2 * harga2;
-            System.out.println("Kerugian susu sebesar Rp. " + rugi2);
+            System.out.println("Milk losses amounted to Rp. " + rugi2);
         } else if (banding2 == susuExp) {
             rugi2 = (susuExp + rusak2) * harga2;
-            System.out.println("Kerugian susu sebesar Rp. " + rugi2);
+            System.out.println("Milk losses amounted to Rp. " + rugi2);
         }
 
-        System.out.print("Masukkan harga soda: ");
+        System.out.print("Input the price of the soda: ");
         harga3 = sc.nextInt();
         banding3 = Math.max(sodaExp, sodaNo);
         if (banding3 == sodaNo) {
             rugi3 = rusak3 * harga3;
-            System.out.println("Kerugian soda sebesar Rp. " + rugi3);
+            System.out.println("Soda losses amounted to Rp. " + rugi3);
         } else if (banding3 == sodaExp) {
             rugi3 = (sodaExp + rusak3) * harga3;
-            System.out.println("Kerugian soda sebesar Rp. " + rugi3);
+            System.out.println("Soda losses amounted to Rp. " + rugi3);
         }
 
         kerugian = rugi1 + rugi2 + rugi3;
-        System.out.println("TOTAL KERUGIAN = Rp. " + kerugian);
+        System.out.println("TOTAL LOSSES = Rp. " + kerugian);
 
         System.out.println();
     }
@@ -602,7 +613,7 @@ public class BismillahFinish {
     static void RestockGoods() {
         System.out.println("RESTOCK GOODS");
         System.out.println("=============");
-        System.out.print("Input the number of items that must be available in the warehouse: ");
+        System.out.print("Input the number of goods that must be available in the warehouse: ");
         gudang = sc.nextInt();
 
         // Pengecekan Stok Barang
@@ -624,7 +635,7 @@ public class BismillahFinish {
 
         if ((sisa2 < gudang) && (sisa3 < gudang)) {
             if ((sisa2 == 10) && (sisa3 == 10))
-                System.out.println("Status of canned beverages: safe stock");
+                System.out.println("Status of canned beverages: no restocking required");
             else if ((sisa2 < 10) || (sisa3 < 10))
                 System.out.println("Canned Beverage Status: restock immediately");
             restok2 = gudang - sisa2;
