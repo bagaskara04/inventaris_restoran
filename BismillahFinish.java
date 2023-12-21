@@ -27,10 +27,10 @@ public class BismillahFinish {
             int bahasa = sc.nextInt();
             switch (bahasa) {
                 case 1:
-                    BahasaIndonesia();
+                    LoginUserIndo();
                     break;
                 case 2:
-                    BahasaInggris();
+                    LoginUserEnglish();
                     break;
                 case 3:
                     KeluarProgram();
@@ -42,20 +42,103 @@ public class BismillahFinish {
         }
     }
 
-    static void BahasaIndonesia() {
+    // Pilih Role Bahasa Indonesia
+    static void LoginUserIndo() {
+        System.out.println("===== INVENTARIS RESTORAN =====");
+        System.out.println("===============================");
+        System.out.println("== Menu 1 : Manajer          ==");
+        System.out.println("== Menu 2 : Karyawan         ==");
+        System.out.println("== Menu 3 : Keluar           ==");
+        System.out.println("===============================");
+        System.out.print("Pilih Role : ");
+        int role = sc.nextInt();
+        switch (role) {
+            case 1:
+                ManajerIndo();
+                break;
+            case 2:
+                KaryawanIndo();
+                break;
+            default:
+                break;
+        }
+    }
+
+    // Pilih role bahasa inggris
+    static void LoginUserEnglish() {
+        System.out.println("===== INVENTARIS RESTORAN =====");
+        System.out.println("===============================");
+        System.out.println("== Menu 1 : Manager          ==");
+        System.out.println("== Menu 2 : Staff            ==");
+        System.out.println("== Menu 3 : Exit             ==");
+        System.out.println("===============================");
+        System.out.print("Pilih Role : ");
+        int role = sc.nextInt();
+        switch (role) {
+            case 1:
+                ManagerEnglish();
+                break;
+            case 2:
+                StaffEnglish();
+                break;
+            default:
+                break;
+        }
+    }
+
+    static void ManajerIndo() {
 
         while (true) {
             System.out.println("===================== INVENTARIS RESTORAN ======================");
+            System.out.println("============================ Manajer ===========================");
+            System.out.println("== Menu 1: Restok Barang                                      =="); // manajer
+            System.out.println("== Menu 2: Pelaporan Barang Masuk, Keluar, Rusak              =="); // manajer/staff
+            System.out.println("== Menu 3: Pelaporan Barang Yang Paling Banyak Keluar & Habis =="); // manajer
+            System.out.println("== Menu 4: Update Stok Barang                                 =="); // staff/manajer
+            System.out.println("== Menu 5: Keluar                                             =="); // staff/manajer
             System.out.println("================================================================");
+            System.out.print("Pilih Menu (1/2/3/4/5): ");
+            menu = sc.nextInt();
+
+            switch (menu) {
+                case 1:
+                    RestokBarang();
+                    break;
+
+                case 2:
+                    LaporanBarangMKR();
+                    break;
+
+                case 3:
+                    LaporanBarangKeluarHabis();
+                    break;
+
+                case 4:
+                    UpdateStok();
+                    break;
+
+                case 5:
+                    Keluar();
+                    break;
+
+                default:
+                    System.out.println("Pilihan tidak valid. Silakan pilih menu 1/2/3/4/5/6/7.");
+            }
+
+        }
+    }
+
+    static void KaryawanIndo() {
+        while (true) {
+            System.out.println("===================== INVENTARIS RESTORAN ======================");
+            System.out.println("========================== Karyawan ============================");
             System.out.println("== Menu 1: Input Data Barang Masuk & Keluar                   ==");
             System.out.println("== Menu 2: Input Barang Rusak                                 ==");
-            System.out.println("== Menu 3: Restok Barang                                      ==");
-            System.out.println("== Menu 4: Pelaporan Barang Masuk, Keluar, Rusak              ==");
-            System.out.println("== Menu 5: Pelaporan Barang Yang Paling Banyak Keluar & Habis ==");
-            System.out.println("== Menu 6: Update Stok Barang                                 ==");
-            System.out.println("== Menu 7: Keluar                                             ==");
+            System.out.println("== Menu 3: Pelaporan Barang Masuk, Keluar, Rusak              ==");
+            System.out.println("== Menu 4: Update Stok Barang                                 ==");
+            System.out.println("== Menu 5: Keluar                                             ==");
             System.out.println("================================================================");
-            System.out.print("Pilih Menu (1/2/3/4/5/6/7): ");
+            System.out.print("Pilih Menu (1/2/3/4/5): ");
             menu = sc.nextInt();
 
             switch (menu) {
@@ -68,47 +151,77 @@ public class BismillahFinish {
                     break;
 
                 case 3:
-                    RestokBarang();
-                    break;
-
-                case 4:
                     LaporanBarangMKR();
                     break;
 
-                case 5:
-                    LaporanBarangKeluarHabis();
-                    break;
-
-                case 6:
+                case 4:
                     UpdateStok();
                     break;
 
-                case 7:
+                case 5:
                     Keluar();
                     break;
-                case 8:
 
-                    break;
                 default:
-                    System.out.println("Pilihan tidak valid. Silakan pilih menu 1/2/3/4/5/6/7.");
+                    System.out.println("Pilihan tidak valid. Silakan pilih menu 1/2/3/4/5.");
             }
 
         }
     }
 
-    static void BahasaInggris() {
+   static void ManagerEnglish() {
+
         while (true) {
             System.out.println("===================== INVENTARIS RESTORAN ======================");
+            System.out.println("=========================== Manager ============================");
+            System.out.println("== Menu 1: Restock Goods                                      =="); // manajer
+            System.out.println("== Menu 2: Reporting of Goods In, Out, Damaged                =="); // manajer/staff
+            System.out.println("== Menu 3: Reporting of Most Outgoing & Consumable Goods      =="); // manajer
+            System.out.println("== Menu 4: Stock Goods Update                                 =="); // staff/manajer
+            System.out.println("== Menu 5: Exit                                               =="); // staff/manajer
             System.out.println("================================================================");
+            System.out.print("Choose Menu (1/2/3/4/5): ");
+            menu = sc.nextInt();
+
+            switch (menu) {
+                case 1:
+                    RestockGoods();
+                    break;
+
+                case 2:
+                    ReportInOutDamagedGoods();
+                    break;
+
+                case 3:
+                    ReportOutgoingConsumable();
+                    break;
+
+                case 4:
+                    StockGoodsUpdate();
+                    break;
+
+                case 5:
+                    Exit();
+                    break;
+
+                default:
+                    System.out.println("Invalid Selection. Please Select Menu 1/2/3/4/5.");
+            }
+
+        }
+    }
+
+    static void StaffEnglish() {
+        while (true) {
+            System.out.println("===================== INVENTARIS RESTORAN ======================");
+            System.out.println("============================ Staff =============================");
             System.out.println("== Menu 1: Incoming & Outgoing Goods Data Input               ==");
-            System.out.println("== Menu 2: Damaged Goods Input                                ==");
-            System.out.println("== Menu 3: Restock Goods                                      ==");
-            System.out.println("== Menu 4: Reporting of Goods In, Out, Damaged                ==");
-            System.out.println("== Menu 5: Reporting of Most Outgoing & Consumable Items      ==");
-            System.out.println("== Menu 6: Stock Goods Update                                 ==");
-            System.out.println("== Menu 7: Exit                                               ==");
+            System.out.println("== Menu 2: Damaged Goods Data Input                           ==");
+            System.out.println("== Menu 3: Reporting of Goods In, Out, Damaged                ==");
+            System.out.println("== Menu 4: Stock Goods Update                                 ==");
+            System.out.println("== Menu 5: Exit                                             ==");
             System.out.println("================================================================");
-            System.out.print("Choose Menu (1/2/3/4/5/6/7): ");
+            System.out.print("Choose Menu (1/2/3/4/5): ");
             menu = sc.nextInt();
 
             switch (menu) {
@@ -121,27 +234,19 @@ public class BismillahFinish {
                     break;
 
                 case 3:
-                    RestockGoods();
-                    break;
-
-                case 4:
                     ReportInOutDamagedGoods();
                     break;
 
-                case 5:
-                    ReportOutgoingConsumable();
-                    break;
-
-                case 6:
+                case 4:
                     StockGoodsUpdate();
                     break;
 
-                case 7:
+                case 5:
                     Exit();
                     break;
 
                 default:
-                    System.out.println("Invalid selection. Please select menu 1/2/3/4/5/6/7.");
+                    System.out.println("Invalid Selection. Please Select Menu 1/2/3/4/5.");
             }
 
         }
@@ -412,12 +517,12 @@ public class BismillahFinish {
     }
 
     static void DamagedGoodsInput() {
-        System.out.print("Masukkan bulan sekarang (1-12): ");
+        System.out.print("Input the Current Month (1-12): ");
         now = sc.nextInt();
 
         System.out.println();
 
-        System.out.println("MAKANAN RINGAN");
+        System.out.println("SNACK");
         System.out.print("Masukkan jumlah snack yang rusak: ");
         rusak1 = sc.nextInt();
         cek1 = snack - jual1 - rusak1;
